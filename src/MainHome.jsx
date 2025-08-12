@@ -23,9 +23,11 @@ function MainHome() {
     "React Native",
     "PHP",
     "Laravel",
-    "JavaScript",
+    "Javascript",
+    "Typescript",
+    "Inertia Js",
     "Node Js",
-    "MySQL",
+    "MySQL"
   ];
   return (
     <>
