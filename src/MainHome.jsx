@@ -22,6 +22,7 @@ import laravel from '../src/assets/laravel.svg';
 import inertia from '../src/assets/inertia.svg';
 import python from '../src/assets/python.svg';
 import ContactForm from './components/ContactForm';
+import { Link } from 'react-scroll';
 
 function MainHome() {
   const words = [
@@ -140,7 +141,7 @@ function MainHome() {
                 <h1 className='text-3xl text-left text-white leading-none'>Hii, I'm <span className='text-blue-500'>Shankar Manjrekar</span> and I am a passionate <TypewriterEffectSmooth words={words}/></h1>
                 <p className='text-md text-justify text-white'>As a Web Developer with 2+ years of experience in building dynamic, responsive, and high-performance applications using Inertia.js, React.js, and Laravel. Proficient in creating scalable front-end interfaces, implementing modern UI/UX with Tailwind CSS and Bootstrap, and developing robust backend functionality with seamless API integration. Skilled in performance optimization, clean code practices, and delivering reliable full-stack solutions that align with business goals and enhance user experience.</p>
                 <div className="flex gap-4 mt-6">
-                  <ShimmerButton>Hire</ShimmerButton>
+                  <Link to={"contact"} smooth={true}><ShimmerButton>Hire</ShimmerButton></Link>
                   <a href={ResumePdf} download><ShimmerButton>Download Resume</ShimmerButton></a>
                 </div>
               </div>
