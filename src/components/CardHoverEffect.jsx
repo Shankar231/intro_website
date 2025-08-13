@@ -1,12 +1,10 @@
 import { cn } from "../lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 export const HoverEffect = ({
   items,
-  className,
+  className
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -29,7 +27,7 @@ export const HoverEffect = ({
                 }}
                 exit={{
                   opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
+                  transition: { duration: 0.15, delay: 0.6 },
                 }} />
             )}
           </AnimatePresence>

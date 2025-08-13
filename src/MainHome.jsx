@@ -6,7 +6,7 @@ import Footer from './Layout/Footer';
 import { ScrollVelocityContainer,ScrollVelocityRow } from './components/ScrollBasedVelocity';
 import { ShimmerButton } from './components/ShimmerButton';
 import ResumePdf from '../src/assets/Shankar_Manjrekar_cv.pdf';
-import Shankar from '../src/assets/Shankar.png';
+import Shankar from '../src/assets/shankar.png';
 import { FloatingDock } from './components/SocialLinks';
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -18,10 +18,10 @@ import html from '../src/assets/html.svg';
 import css from '../src/assets/css.svg';
 import github from '../src/assets/github.svg';
 import mysql from '../src/assets/mysql.svg';
-import php from '../src/assets/php.svg';
 import laravel from '../src/assets/laravel.svg';
 import inertia from '../src/assets/inertia.svg';
 import python from '../src/assets/python.svg';
+import ContactForm from './components/ContactForm';
 
 function MainHome() {
   const words = [
@@ -36,15 +36,14 @@ function MainHome() {
   ];
 
   const languages = [
+    "Web Developer",
     "React JS",
-    "Fullstack Developer",
     "React Native",
-    "PHP",
+    "Python",
     "Laravel",
     "Javascript",
     "Typescript",
     "Inertia Js",
-    "Node Js",
     "MySQL"
   ];
 
@@ -125,7 +124,7 @@ function MainHome() {
             <ScrollVelocityContainer className="text-4xl md:text-7xl md:leading-[14rem] font-bold tracking-[-0.02em]">
               <ScrollVelocityRow baseVelocity={2} direction={1}>
                 {languages.map((language, index) => (
-                  <span key={index} className='text-[20rem]'>
+                  <span key={index} className='text-[20rem] text-[#213547]'>
                     &nbsp;|&nbsp;{language}
                   </span>
                 ))}
@@ -152,12 +151,13 @@ function MainHome() {
               </div>
             </div>
           </section>
-          <section className='py-30 h-[100vh] bg-black px-14' id='skills'>
+          <section className='py-30 bg-black px-14' id='skills'>
             <h2 className='text-4xl text-left text-white leading-none inline-block font-semibold'>Skills</h2>
             <HoverEffect items={skills} />
           </section>
-          <section className='py-30 h-[100vh] px-14' id='contact'>
-
+          <section className='py-30 px-14' id='contact'>
+            <h3 className='text-4xl text-left text-white leading-none inline-block font-semibold'>Contact Me</h3>
+            <ContactForm/>
           </section>
         </div>
       <Footer/>

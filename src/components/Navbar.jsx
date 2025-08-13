@@ -10,10 +10,8 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-// import logo from '../assets/codium_new.webp';
+import logo from '../assets/logo_main.png';
 import React, { useRef, useState } from "react";
-import { div } from "framer-motion/client";
-
 
 export const Navbar = ({
   children,
@@ -200,8 +198,8 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <Link to="/" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-2xl font-normal text-black italic">
-      Shankar M.
+    <Link to="/" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-2xl font-normal text-blue-500 italic">
+      <img src={logo} alt="Logo" className="h-15"/>
     </Link>
   );
 };
