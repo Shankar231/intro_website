@@ -6,18 +6,15 @@ import { Link } from "react-router-dom";
 
 export const HoverEffect = ({
   items,
-  className
+  className,
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <div
-      className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-10", className)}>
+      className={cn("grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 py-10 gap-4", className)}>
       {items.map((item, idx) => (
-        <Link
-          to={item?.link}
-          key={item?.link}
-          className="relative group block p-2 h-full w-full"
+        <div className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}>
           <AnimatePresence>
@@ -38,9 +35,9 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <img src={item.image} alt="skills" className={cn("h-15",item.className)}/>
           </Card>
-        </Link>
+        </div>
       ))}
     </div>
   );
@@ -53,11 +50,11 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-violet-500 group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-transparent group-hover:border-slate-700 relative z-20 border-1",
         className
       )}>
-      <div className="relative z-50">
-        <div className="p-4">{children}</div>
+      <div className="relative z-50 flex justify-center">
+        <div className="p-4 flex flex-col gap-4">{children}</div>
       </div>
     </div>
   );
@@ -67,25 +64,8 @@ export const CardTitle = ({
   children
 }) => {
   return (
-    <h4 className={cn("text-white text-xl font-bold tracking-wide text-left", className)}>
+    <h4 className={cn("text-white text-md font-bold tracking-wide text-center", className)}>
       {children}
     </h4>
-  );
-};
-export const CardDescription = ({
-  className,
-  children
-}) => {
-  return (
-    <>
-        <div className="flex justify-between items-end">
-            <div className="max-w-60">
-                <p className={cn("mt-2 text-white tracking-wide leading-relaxed text-md text-left", className)}>
-                {children}
-                </p>
-            </div>
-            <ArrowRight size='25px' color="white"/>
-        </div>
-    </>
   );
 };

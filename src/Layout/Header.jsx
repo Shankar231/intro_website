@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { Navbar,NavBody,NavItems,MobileNav,NavbarLogo,MobileNavHeader,MobileNavToggle,MobileNavMenu, } from '../components/Navbar';
 import { InteractiveHoverButton } from '../components/InteractiveHoverButton';
 
@@ -8,15 +8,15 @@ function Header() {
     const navItems = [
         {
             name: "About Me",
-            link: "/about-me",
+            link: "about_me",
         },
         {
             name: "Experience",
-            link: "/services",
+            link: "experience",
         },
         {
             name: "Skills",
-            link: "/about-us",
+            link: "skills",
         },
     ];
     useEffect(() => {
@@ -35,7 +35,7 @@ function Header() {
             <NavbarLogo />
             <NavItems items={navItems} />
             <div className="flex items-center gap-4">
-                <Link to={'/contact-us'}><InteractiveHoverButton>Contact</InteractiveHoverButton></Link>
+                <Link to='contact' smooth={true}><InteractiveHoverButton>Contact Me</InteractiveHoverButton></Link>
             </div>
             </NavBody>
             
@@ -57,13 +57,14 @@ function Header() {
                 <Link
                     key={`mobile-link-${idx}`}
                     to={item.link}
+                    smooth={true}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="relative text-neutral-600 dark:text-neutral-300"
                 >
                     <span className="block">{item.name}</span>
                 </Link>
                 ))}
-                <Link to={'/contact-us'}>Contact Us</Link>
+                <Link to='contact' smooth={true}>Contact Me</Link>
             </MobileNavMenu>
             </MobileNav>
         </Navbar>

@@ -3,7 +3,7 @@ import { cn } from "../lib/utils";
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 // import { IconMenu2, IconX } from "@tabler/icons-react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import {
   motion,
   AnimatePresence,
@@ -99,7 +99,7 @@ export const NavItems = ({
           onClick={onItemClick}
           className="relative px-4 py-2"
           key={`link-${idx}`}
-          to={item.link}>
+          to={item.link} smooth={true}>
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
@@ -200,8 +200,8 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <Link to="/" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
-      {/* <img src={logo} alt="logo" className="h-12"/> */}
+    <Link to="/" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-2xl font-normal text-black italic">
+      Shankar M.
     </Link>
   );
 };
