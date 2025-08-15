@@ -11,12 +11,12 @@ function Header() {
             link: "about_me",
         },
         {
-            name: "Experience",
-            link: "experience",
-        },
-        {
             name: "Skills",
             link: "skills",
+        },
+        {
+            name: "Experience",
+            link: "experience",
         },
     ];
     useEffect(() => {

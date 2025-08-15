@@ -23,6 +23,7 @@ import inertia from '../src/assets/inertia.svg';
 import python from '../src/assets/python.svg';
 import ContactForm from './components/ContactForm';
 import { Link } from 'react-scroll';
+import { Timeline } from './components/Timeline';
 
 function MainHome() {
   const words = [
@@ -116,6 +117,28 @@ function MainHome() {
     image: github,
   },
 ];
+
+  const experience = [
+    {
+      year: "July 2025 - Present",
+      title:"Web Developer",
+      content:"As a Web Developer promoted for delivering high-quality solutions, I specialize in building dynamic, responsive, and high-performance applications using Inertia.js, React.js, and Laravel. Proficient in creating scalable front-end interfaces, implementing modern UI/UX with Tailwind CSS and Bootstrap, and developing robust backend functionality with seamless API integration. Experienced in client interaction, gathering requirements, and leading projects from conception to deployment. Skilled in performance optimization, clean code practices, and delivering reliable full-stack solutions that align with business goals and enhance user experience."
+    },
+    {
+      year: "August 2024 - June 2025",
+      title:"Associate Developer",
+      content:"Promoted to Associate Developer for consistently delivering high-quality solutions, I focus on crafting dynamic, responsive, and high-performance web applications using React.js. I excel at building scalable front-end interfaces, designing modern UI/UX with Tailwind CSS and Bootstrap, and applying performance optimization techniques to ensure fast, reliable, and user-friendly experiences that align with business goals."
+    },
+    {
+      year: "May 2023 - July 2024",
+      title:"Frotend Developer",
+      content:"As a Frontend Developer, I worked on creating user-friendly interfaces using HTML, CSS, JavaScript, Bootstrap, and jQuery, ensuring responsive design, cross-browser compatibility, and smooth user interactions."
+    },
+    {
+      year: "Sept 2021 - Nov 2021",
+      title:"Core Java and SQL (Internship)"
+    },
+  ];
   return (
     <>
       <SmoothCursor/>
@@ -155,6 +178,12 @@ function MainHome() {
           <section className='py-30 bg-black px-14' id='skills'>
             <h2 className='text-4xl text-left text-white leading-none inline-block font-semibold'>Skills</h2>
             <HoverEffect items={skills} />
+          </section>
+          <section className='py-30 px-14' id='experience'>
+            <h2 className='text-4xl text-left text-white leading-none inline-block font-semibold'>Experience</h2>
+            <div className="relative w-full overflow-clip">
+              <Timeline data={experience} />
+            </div>
           </section>
           <section className='py-30 px-14' id='contact'>
             <h3 className='text-4xl text-left text-white leading-none inline-block font-semibold'>Contact Me</h3>
