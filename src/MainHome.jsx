@@ -148,7 +148,7 @@ function MainHome() {
             <ScrollVelocityContainer className="text-4xl md:text-7xl md:leading-[14rem] font-bold tracking-[-0.02em]">
               <ScrollVelocityRow baseVelocity={2} direction={1}>
                 {languages.map((language, index) => (
-                  <span key={index} className='text-[20rem] text-[#213547]'>
+                  <span key={index} className='text-[5rem] lg:text-[20rem] text-[#213547]'>
                     &nbsp;|&nbsp;{language}
                   </span>
                 ))}
@@ -157,21 +157,21 @@ function MainHome() {
             <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
           </div>
-          <section className="flex w-full items-center justify-between" id='about_me'>
-            <div className='w-[50%]'>
-              <div className='px-14'>
+          <section className="flex flex-col lg:flex-row w-full items-center justify-between" id='about_me'>
+            <div className='w-[100%] lg:w-[50%]'>
+              <div className='px-6 lg:px-14'>
                 <FloatingDock mobileClassName="translate-y-20" items={links}/>
-                <h1 className='text-3xl text-left text-white leading-none'>Hii, I'm <span className='text-blue-500'>Shankar Manjrekar</span> and I am a passionate <TypewriterEffectSmooth words={words}/></h1>
-                <p className='text-md text-justify text-white'>As a Web Developer with 2+ years of experience in building dynamic, responsive, and high-performance applications using Inertia.js, React.js, and Laravel. Proficient in creating scalable front-end interfaces, implementing modern UI/UX with Tailwind CSS and Bootstrap, and developing robust backend functionality with seamless API integration. Skilled in performance optimization, clean code practices, and delivering reliable full-stack solutions that align with business goals and enhance user experience.</p>
-                <div className="flex gap-4 mt-6">
+                <h1 className='text-3xl text-left text-white'>Hii, I'm <span className='text-blue-500'>Shankar Manjrekar</span> and I am a passionate <TypewriterEffectSmooth words={words}/></h1>
+                <p className='text-[14px] lg:text-xl text-justify text-white'>As a Web Developer with 2+ years of experience in building dynamic, responsive, and high-performance applications using Inertia.js, React.js, and Laravel. Proficient in creating scalable front-end interfaces, implementing modern UI/UX with Tailwind CSS and Bootstrap, and developing robust backend functionality with seamless API integration. Skilled in performance optimization, clean code practices, and delivering reliable full-stack solutions that align with business goals and enhance user experience.</p>
+                <div className="flex gap-4 mt-2 lg:mt-6">
                   <Link to={"contact"} smooth={true}><ShimmerButton>Hire</ShimmerButton></Link>
                   <a href={ResumePdf} download><ShimmerButton>Download Resume</ShimmerButton></a>
                 </div>
               </div>
             </div>
-            <div className='w-[50%]'>
+            <div className='w-[100%] lg:w-[50%]'>
               <div className="flex justify-center grayscale-90">
-                <img src={Shankar} alt="shankar_manjrekar" className='h-160 w-130'/>
+                <img src={Shankar} alt="shankar_manjrekar" className='h-110 lg:h-160'/>
               </div>
             </div>
           </section>
@@ -179,13 +179,13 @@ function MainHome() {
             <h2 className='text-4xl text-left text-white leading-none inline-block font-semibold'>Skills</h2>
             <HoverEffect items={skills} />
           </section>
-          <section className='py-30 px-14' id='experience'>
+          <section className='py-30 px-6 lg:px-14' id='experience'>
             <h2 className='text-4xl text-left text-white leading-none inline-block font-semibold'>Experience</h2>
             <div className="relative w-full overflow-clip">
               <Timeline data={experience} />
             </div>
           </section>
-          <section className='py-30 px-14' id='contact'>
+          <section className='py-30 px-6 lg:px-14' id='contact'>
             <h3 className='text-4xl text-left text-white leading-none inline-block font-semibold'>Contact Me</h3>
             <ContactForm/>
           </section>

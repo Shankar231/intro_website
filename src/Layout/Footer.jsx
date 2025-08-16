@@ -8,21 +8,21 @@ function Footer() {
     <>
       <footer className="bg-black bottom-0">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-            <div className="flex justify-between w-[100%]">
+            <div className="flex flex-col lg:flex-row md:flex-row justify-between w-[100%]">
                 <div className="mb-6 mb-0 lg:w-[70%] md:w-[50%]">
                     <div className='flex mb-2'>
                         <Link to={"/"}>
-                            <img src={logo} className="lg:h-15 md:h-12 sm:h-10 me-3" alt="Codium Logo" />
+                            <img src={logo} className="lg:h-15 md:h-12 h-10 me-3" alt="Codium Logo" />
                         </Link>
                     </div>
                     <div>
                         <h5 className='text-2xl font-bold text-left'>Shankar Manjrekar</h5>
-                        <p className='text-justify lg:text-lg md:text-md sm:text-sm max-w-120 text-white'>Web Developer passionate about crafting visually appealing and highly functional websites.</p>
+                        <p className='text-justify text-sm lg:text-lg md:text-md max-w-120 text-white'>Web Developer passionate about crafting visually appealing and highly functional websites.</p>
                     </div>
                 </div>
                 <div className="lg:w-[20%] md:w-[30%]">
-                    <h2 className="mb-6 text-sm font-semibold text-white uppercase">Links</h2>
-                    <div className="flex justify-between">
+                    <h2 className="mb-6 text-sm font-semibold text-white uppercase text-left lg:text-center">Links</h2>
+                    <div className="flex justify-start gap-6 lg:justify-between lg:gap-0">
                         <ul className="text-gray-400">
                             <li className="mb-4 text-left">
                                 <Link to={"about_me"} className="text-left" smooth={true}>About Me</Link>

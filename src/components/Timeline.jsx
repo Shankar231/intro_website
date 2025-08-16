@@ -24,7 +24,7 @@ export const Timeline = ({
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
   return (
-    <div className="w-full md:px-10" ref={containerRef}>
+    <div className="w-full px-0 md:px-0 lg:px-10" ref={containerRef}>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
           <div key={index} className="flex justify-start pt-10 md:pt-40 md:gap-10">
@@ -36,16 +36,16 @@ export const Timeline = ({
                   className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
               <h3
-                className="hidden md:block text-md md:pl-20 md:text-2xl font-bold text-neutral-500 ">
+                className="hidden md:block text-md md:pl-20 md:text-xl font-bold text-neutral-500 ">
                 {item.year}
               </h3>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="block text-4xl mb-4 text-left font-bold text-neutral-500">
+              <h3 className="block text-xl mb-4 text-left font-bold text-neutral-500">
                 {item.title}
               </h3>
-              <p className="text-lg text-neutral-500 text-justify">{item.content}</p>
+              <p className="text-xs lg:text-lg md:text-lg text-neutral-500 text-justify">{item.content}</p>
             </div>
           </div>
         ))}

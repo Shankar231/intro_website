@@ -62,9 +62,9 @@ export default function ContactForm () {
 
     return (
         <>
-            <div className="px-20 py-8">
-                <div className="flex w-full gap-6">
-                    <div className="w-[50%]">
+            <div className="px-0 lg:px-20 py-8">
+                <div className="flex flex-col lg:flex-row w-full gap-6">
+                    <div className="w-[100%] lg:w-[50%]">
                         <form ref={formRef} onSubmit={sendEmail}>
                             <div className="mb-3 w-[100%]">
                                 <label for="name" className="block mb-2 lg:text-md md:text-md sm:text-sm font-medium text-left text-white">Full Name</label>
@@ -81,12 +81,12 @@ export default function ContactForm () {
                             <ShimmerButton type="submit" className="w-full" disabled={btnLoading}>{btnLoading ? <><CircularProgress size={20} color="inherit" /> Sending...</> : "Send Message"}</ShimmerButton>
                         </form>
                     </div>
-                    <div className="w-[50%]">
+                    <div className="w-[100%] lg:w-[50%]">
                         <div className="rounded-4xl border-1 border-blue-500 p-1">
-                            <div className="bg-blue-500 lg:h-100 md:h-90 md:p-4 flex lg:justify-evenly md:gap-4 flex-col items-center rounded-4xl">
-                                <div className="flex items-start gap-6 lg:w-80 md:w-50">
+                            <div className="bg-blue-500 lg:h-100 md:h-80 py-4 px-2 lg:p-4 md:p-4 flex lg:justify-evenly gap-6 md:gap-4 flex-col items-start rounded-4xl">
+                                <div className="flex items-start gap-2 lg:gap-6 lg:w-80">
                                     <div>
-                                        <div className="bg-[#030726] rounded-full lg:w-12 md:w-10 lg:h-12 md:h-10 flex items-center justify-center text-white">
+                                        <div className="bg-[#030726] rounded-full w-10 h-10 lg:w-12 md:w-10 lg:h-12 md:h-10 flex items-center justify-center text-white">
                                         <AlternateEmailIcon sx={{
                                             fontSize: 20,
                                             '@media (max-width:768px)': {
@@ -96,13 +96,13 @@ export default function ContactForm () {
                                         </div>
                                     </div>
                                     <div>
-                                        <h6 className="lg:text-lg md:text-md sm:text-sm font-bold text-left text-white">Connect with me</h6>
-                                        <a href="mailto:shankarmanjarekar123@gmail.com" className="text-left lg:text-lg md:text-md sm:text-sm underline font-semibold text-white">shankarmanjarekar123@gmail.com</a>
+                                        <h6 className="text-sm lg:text-lg md:text-lg font-bold text-left text-white">Connect with me</h6>
+                                        <a href="mailto:shankarmanjarekar123@gmail.com" className="text-left text-xs lg:text-lg md:text-lg underline font-semibold text-white">shankarmanjarekar123@gmail.com</a>
                                     </div>
                                 </div>
-                                <div className="flex items-start gap-6 lg:w-80 md:w-50">
+                                <div className="flex items-start gap-2 lg:gap-6 lg:w-80">
                                     <div>
-                                        <div className="bg-[#030726] rounded-full lg:w-12 md:w-10 lg:h-12 md:h-10 flex items-center justify-center text-white">
+                                        <div className="bg-[#030726] rounded-full w-10 h-10 lg:w-12 md:w-10 lg:h-12 md:h-10 flex items-center justify-center text-white">
                                         <CallIcon sx={{
                                             fontSize: 20,
                                             '@media (max-width:768px)': {
@@ -112,13 +112,13 @@ export default function ContactForm () {
                                         </div>
                                     </div>
                                     <div>
-                                        <h6 className="lg:text-lg md:text-md sm:text-sm font-bold text-left text-white">Let's have a chat</h6>
-                                        <a href="tel:+91 9082214852" className="text-left lg:text-lg md:text-md sm:text-sm text-white">+91 90822-14852</a>
+                                        <h6 className="text-sm lg:text-lg md:text-lg font-bold text-left text-white">Let's have a chat</h6>
+                                        <a href="tel:+91 9082214852" className="text-left text-xs lg:text-lg md:text-lg text-white">+91 90822-14852</a>
                                     </div>
                                 </div>
-                                <div className="flex items-start gap-6 lg:w-80 md:w-50">
+                                <div className="flex items-start gap-2 lg:gap-6 lg:w-80">
                                     <div>
-                                        <div className="bg-[#030726] rounded-full lg:w-12 md:w-10 lg:h-12 md:h-10 flex items-center justify-center text-white">
+                                        <div className="bg-[#030726] rounded-full w-10 h-10 lg:w-12 md:w-10 lg:h-12 md:h-10 flex items-center justify-center text-white">
                                             <LocationOnIcon sx={{
                                                 fontSize: 20,
                                                 '@media (max-width:768px)': {
@@ -128,8 +128,8 @@ export default function ContactForm () {
                                         </div>
                                     </div>
                                     <div>
-                                        <h6 className="lg:text-xl md:text-lg sm:text-md font-bold text-left text-white">Find Me Here</h6>
-                                        <p className="text-left lg:text-lg md:text-md sm:text-sm text-white">Mumbai, Maharashtra</p>
+                                        <h6 className="text-sm lg:text-xl md:text-lg font-bold text-left text-white">Find Me Here</h6>
+                                        <p className="text-left text-xs lg:text-lg md:text-lg text-white">Mumbai, Maharashtra</p>
                                     </div>
                                 </div>
                                 <div className="flex">

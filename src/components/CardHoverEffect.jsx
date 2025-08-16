@@ -10,7 +10,7 @@ export const HoverEffect = ({
 
   return (
     <div
-      className={cn("grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 py-10 gap-4", className)}>
+      className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 py-10 gap-4", className)}>
       {items.map((item, idx) => (
         <div className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
