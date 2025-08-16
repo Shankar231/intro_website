@@ -17,7 +17,7 @@ function Footer() {
                     </div>
                     <div>
                         <h5 className='text-2xl font-bold text-left'>Shankar Manjrekar</h5>
-                        <p className='text-justify text-sm lg:text-lg md:text-md max-w-120 text-white'>Web Developer passionate about crafting visually appealing and highly functional websites.</p>
+                        <p className='text-left text-sm lg:text-lg md:text-md max-w-120 text-white'>Web Developer passionate about crafting visually, appealing and highly functional websites.</p>
                     </div>
                 </div>
                 <div className="lg:w-[20%] md:w-[30%]">

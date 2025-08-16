@@ -131,12 +131,13 @@ function MainHome() {
     },
     {
       year: "May 2023 - July 2024",
-      title:"Frotend Developer",
+      title:"Frontend Developer",
       content:"As a Frontend Developer, I worked on creating user-friendly interfaces using HTML, CSS, JavaScript, Bootstrap, and jQuery, ensuring responsive design, cross-browser compatibility, and smooth user interactions."
     },
     {
       year: "Sept 2021 - Nov 2021",
-      title:"Core Java and SQL (Internship)"
+      title:"Core Java and SQL (Internship)",
+      content:"Contributed to developing user interfaces using Core Java. Worked with SQL to manage and query databases for application functionality. Gained hands-on experience in front-end development and integrating it with backend data operations."
     },
   ];
   return (
