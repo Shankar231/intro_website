@@ -24,6 +24,7 @@ import python from '../src/assets/python.svg';
 import ContactForm from './components/ContactForm';
 import { Link } from 'react-scroll';
 import { Timeline } from './components/Timeline';
+import { Pointer } from './components/Pointer';
 
 function MainHome() {
   const words = [
@@ -142,7 +143,7 @@ function MainHome() {
   ];
   return (
     <>
-      <SmoothCursor/>
+      <Pointer className="fill-blue-500"/>
       <Header/>
         <div className='bg-[#030726]'>
           <div className="relative flex w-full flex-col items-center justify-center h-[100vh]">
@@ -162,7 +163,7 @@ function MainHome() {
             <div className='w-[100%] lg:w-[50%]'>
               <div className='px-6 lg:px-14'>
                 <FloatingDock mobileClassName="translate-y-20" items={links}/>
-                <h1 className='text-3xl text-left text-white'>Hii, I'm <span className='text-blue-500'>Shankar Manjrekar</span> and I am a passionate <TypewriterEffectSmooth words={words}/></h1>
+                <h1 className='text-3xl text-left text-white'>Hi, I'm <span className='text-blue-500'>Shankar Manjrekar</span> and I am a passionate <TypewriterEffectSmooth words={words}/></h1>
                 <p className='text-[14px] lg:text-xl text-justify text-white'>As a Web Developer with 2+ years of experience in building dynamic, responsive, and high-performance applications using Inertia.js, React.js, and Laravel. Proficient in creating scalable front-end interfaces, implementing modern UI/UX with Tailwind CSS and Bootstrap, and developing robust backend functionality with seamless API integration. Skilled in performance optimization, clean code practices, and delivering reliable full-stack solutions that align with business goals and enhance user experience.</p>
                 <div className="flex gap-4 mt-2 lg:mt-6">
                   <Link to={"contact"} smooth={true}><ShimmerButton>Hire</ShimmerButton></Link>
