@@ -157,7 +157,7 @@ function MainHome() {
             <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
           </div>
-          <section className="flex flex-col lg:flex-row w-full items-center justify-between" id='about_me'>
+          <section className="flex flex-col lg:flex-row md:flex-row w-full items-center justify-between" id='about_me'>
             <div className='w-[100%] lg:w-[50%]'>
               <div className='px-6 lg:px-14'>
                 <FloatingDock mobileClassName="translate-y-20" items={links}/>
@@ -171,7 +171,7 @@ function MainHome() {
             </div>
             <div className='w-[100%] lg:w-[50%]'>
               <div className="flex justify-center grayscale-90">
-                <img src={Shankar} alt="shankar_manjrekar" className='h-110 lg:h-160'/>
+                <img src={Shankar} alt="shankar_manjrekar" className='h-110 lg:h-160 md:h-150'/>
               </div>
             </div>
           </section>
