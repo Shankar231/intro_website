@@ -121,7 +121,7 @@ function MainHome() {
 
   const experience = [
     {
-      year: "July 2025 - Present",
+      year: "July 2025 - October 2025",
       title:"Web Developer",
       content:"As a Web Developer promoted for delivering high-quality solutions, I specialize in building dynamic, responsive, and high-performance applications using Inertia.js, React.js, and Laravel. Proficient in creating scalable front-end interfaces, implementing modern UI/UX with Tailwind CSS and Bootstrap, and developing robust backend functionality with seamless API integration. Experienced in client interaction, gathering requirements, and leading projects from conception to deployment. Skilled in performance optimization, clean code practices, and delivering reliable full-stack solutions that align with business goals and enhance user experience."
     },
