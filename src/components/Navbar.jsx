@@ -103,7 +103,7 @@ export const NavItems = ({
               layoutId="hovered"
               className="absolute inset-0 h-full w-full rounded-full bg-indigo-100" />
           )}
-          <span className="relative z-20 text-lg transition duration-200 text-[#426EEF]">
+          <span className="relative z-20 text-lg transition duration-200 text-[#2b7efe]">
             {item.name}
           </span>
         </Link>
@@ -187,11 +187,11 @@ export const MobileNavToggle = ({
 }) => {
   return isOpen ? (
     <div className="p-4">
-      <CloseIcon className="text-[#426EEF]" onClick={onClick} />
+      <CloseIcon className="text-[#2b7efe]" onClick={onClick} />
     </div>
   ) : (
     <div className="p-4">
-      <MenuIcon className="text-[#426EEF]" onClick={onClick} />
+      <MenuIcon className="text-[#2b7efe]" onClick={onClick} />
     </div>
   );
 };

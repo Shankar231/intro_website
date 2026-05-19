@@ -68,22 +68,22 @@ export default function ContactForm () {
                         <form ref={formRef} onSubmit={sendEmail}>
                             <div className="mb-3 w-[100%]">
                                 <label for="name" className="block mb-2 lg:text-md md:text-md sm:text-sm font-medium text-left text-white">Full Name</label>
-                                <input type="text" name="name" className="shadow-xs bg-gray-200 border border-white text-gray-900 lg:text-lg md:text-md sm:text-sm rounded-3xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 shadow-xl" required />
+                                <input type="text" name="name" className="shadow-xs bg-gray-200 border border-white text-gray-900 lg:text-lg md:text-md sm:text-sm rounded-3xl focus:ring-[#2b7efe] focus:border-[#2b7efe] block w-full p-2.5" required />
                             </div>
                             <div className="mb-3 w-[100%]">
                                 <label for="email" className="block mb-2 lg:text-md md:text-md sm:text-sm font-medium text-left text-white">Email Address</label>
-                                <input type="email" name="email" className="shadow-xs bg-gray-200 border border-white text-gray-900 lg:text-lg md:text-md sm:text-sm rounded-3xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 shadow-xl" required />
+                                <input type="email" name="email" className="shadow-xs bg-gray-200 border border-white text-gray-900 lg:text-lg md:text-md sm:text-sm rounded-3xl focus:ring-[#2b7efe] focus:border-[#2b7efe] block w-full p-2.5" required />
                             </div>
                             <div className="mb-5">
                                 <label for="message" className="block mb-2 lg:text-md md:text-md sm:text-sm font-medium text-left text-white">Your message</label>
-                                <textarea name="message" rows="4" className="shadow-xs bg-gray-200 border border-white text-gray-900 lg:text-lg md:text-md sm:text-sm rounded-3xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 shadow-xl" placeholder="Write your message here..."></textarea>
+                                <textarea name="message" rows="4" className="shadow-xs bg-gray-200 border border-white text-gray-900 lg:text-lg md:text-md sm:text-sm rounded-3xl focus:ring-[#2b7efe] focus:border-[#2b7efe] block w-full p-2.5" placeholder="Write your message here..."></textarea>
                             </div>
                             <ShimmerButton type="submit" className="w-full" disabled={btnLoading}>{btnLoading ? <><CircularProgress size={20} color="inherit" /> Sending...</> : "Send Message"}</ShimmerButton>
                         </form>
                     </div>
                     <div className="w-[100%] lg:w-[50%]">
-                        <div className="rounded-4xl border-1 border-blue-500 p-1">
-                            <div className="bg-blue-500 lg:h-100 md:h-80 py-4 px-2 lg:p-4 md:p-4 flex lg:justify-evenly gap-6 md:gap-4 flex-col items-start rounded-4xl">
+                        <div className="rounded-4xl border-1 border-[#2b7efe] p-1">
+                            <div className="bg-[#2b7efe] lg:h-100 md:h-80 py-4 px-2 lg:p-4 md:p-4 flex lg:justify-evenly gap-6 md:gap-4 flex-col items-start rounded-[28px]">
                                 <div className="flex items-start gap-2 lg:gap-6 lg:w-80">
                                     <div>
                                         <div className="bg-[#030726] rounded-full w-10 h-10 lg:w-12 md:w-10 lg:h-12 md:h-10 flex items-center justify-center text-white">

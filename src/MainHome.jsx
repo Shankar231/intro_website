@@ -13,11 +13,14 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { HoverEffect } from './components/CardHoverEffect';
 import react from '../src/assets/react.svg';
+import next from '../src/assets/next.svg';
 import ts from '../src/assets/typescript.svg';
 import html from '../src/assets/html.svg';
 import css from '../src/assets/css.svg';
 import github from '../src/assets/github.svg';
 import mysql from '../src/assets/mysql.svg';
+import mongodb from '../src/assets/mongodb.svg';
+import firebase from '../src/assets/firebase.svg';
 import laravel from '../src/assets/laravel.svg';
 import inertia from '../src/assets/inertia.svg';
 import python from '../src/assets/python.svg';
@@ -29,7 +32,7 @@ import { Pointer } from './components/Pointer';
 function MainHome() {
   const words = [
     {
-      text: "Web",
+      text: "Full Stack",
       className: "text-blue-500",
     },
     {
@@ -39,15 +42,20 @@ function MainHome() {
   ];
 
   const languages = [
-    "Web Developer",
     "React JS",
+    "Next JS",
     "React Native",
     "Python",
     "Laravel",
     "Javascript",
     "Typescript",
-    "Inertia Js",
-    "MySQL"
+    "Inertia JS",
+    "MySQL",
+    "MongoDB",
+    "Firebase",
+    "Tailwind CSS",
+    "Shopify",
+    "Wordpress"
   ];
 
   const links = [
@@ -78,15 +86,19 @@ function MainHome() {
 
   const skills = [
   {
-    title: "React Js",
+    title: "React JS",
     image: react,
+  },
+  {
+    title: "Next JS",
+    image: next,
   },
   {
     title: "React Native",
     image: react,
   },
   {
-    title: "Inertia Js",
+    title: "Inertia JS",
     image: inertia,
   },
   {
@@ -104,6 +116,14 @@ function MainHome() {
   {
     title: "MySQL",
     image: mysql,
+  },
+  {
+    title: "MongoDB",
+    image: mongodb,
+  },
+  {
+    title: "Firebase",
+    image: firebase,
   },
   {
     title: "HTML",
@@ -143,7 +163,7 @@ function MainHome() {
   ];
   return (
     <>
-      <Pointer className="fill-blue-500"/>
+      <Pointer className="fill-[#2b7efe]"/>
       <Header/>
         <div className='bg-[#030726]'>
           <div className="relative flex w-full flex-col items-center justify-center h-[100vh]">
@@ -159,12 +179,12 @@ function MainHome() {
             <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
           </div>
-          <section className="flex flex-col lg:flex-row md:flex-row w-full items-center justify-between" id='about_me'>
+          <section className="flex flex-col lg:flex-row md:flex-row w-full items-center justify-between h-screen" id='about_me'>
             <div className='w-[100%] lg:w-[50%]'>
               <div className='px-6 lg:px-14'>
                 <FloatingDock mobileClassName="translate-y-20" items={links}/>
-                <h1 className='text-3xl text-left text-white'>Hi, I'm <span className='text-blue-500'>Shankar Manjrekar</span> and I am a passionate <TypewriterEffectSmooth words={words}/></h1>
-                <p className='text-[14px] lg:text-xl text-justify text-white'>As a Web Developer with 2+ years of experience in building dynamic, responsive, and high-performance applications using Inertia.js, React.js, and Laravel. Proficient in creating scalable front-end interfaces, implementing modern UI/UX with Tailwind CSS and Bootstrap, and developing robust backend functionality with seamless API integration. Skilled in performance optimization, clean code practices, and delivering reliable full-stack solutions that align with business goals and enhance user experience.</p>
+                <h1 className='text-3xl text-left text-white'>Hi, I'm <span className='text-[#2b7efe]'>Shankar Manjrekar</span> and I am a passionate <TypewriterEffectSmooth words={words}/></h1>
+                <p className='text-[14px] lg:text-xl text-left text-white'>As a Fullstack Developer with 3+ years of experience in building dynamic, responsive, and high-performance applications using Inertia.js, React.js, and Laravel. Proficient in creating scalable front-end interfaces, implementing modern UI/UX with Tailwind CSS and Bootstrap, and developing robust backend functionality with seamless API integration. Skilled in performance optimization, clean code practices, and delivering reliable full-stack solutions that align with business goals and enhance user experience.</p>
                 <div className="flex gap-4 mt-2 lg:mt-6">
                   <Link to={"contact"} smooth={true}><ShimmerButton>Hire</ShimmerButton></Link>
                   <a href={ResumePdf} download><ShimmerButton>Download Resume</ShimmerButton></a>
@@ -172,8 +192,11 @@ function MainHome() {
               </div>
             </div>
             <div className='w-[100%] lg:w-[50%]'>
-              <div className="flex justify-center grayscale-90">
-                <img src={Shankar} alt="shankar_manjrekar" className='h-110 lg:h-160 md:h-150'/>
+              <div className="flex justify-center">
+                <div className='h-140 w-90 absolute bg-[#2b7efe]/50 rounded-3xl shadow-4xl blur-3xl'></div>
+                <div className='relative'>
+                  <img src={Shankar} alt="shankar_manjrekar" className='h-110 lg:h-180 md:h-120'/>
+                </div>
               </div>
             </div>
           </section>
@@ -182,13 +205,13 @@ function MainHome() {
             <HoverEffect items={skills} />
           </section>
           <section className='py-30 px-6 lg:px-14' id='experience'>
-            <h2 className='text-4xl text-left text-white leading-none inline-block font-semibold'>Experience</h2>
+            <h3 className='text-4xl text-left text-white leading-none inline-block font-semibold'>Experience</h3>
             <div className="relative w-full overflow-clip">
               <Timeline data={experience} />
             </div>
           </section>
           <section className='py-30 px-6 lg:px-14' id='contact'>
-            <h3 className='text-4xl text-left text-white leading-none inline-block font-semibold'>Contact Me</h3>
+            <h4 className='text-4xl text-left text-white leading-none inline-block font-semibold'>Contact Me</h4>
             <ContactForm/>
           </section>
         </div>
