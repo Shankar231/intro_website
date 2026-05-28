@@ -10,30 +10,33 @@ export const HoverEffect = ({
 
   return (
     <div
-      className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 py-10 gap-4", className)}>
+      className={cn("flex flex-wrap gap-3", className)}>
       {items.map((item, idx) => (
-        <div className="relative group block p-2 h-full w-full"
+        <div
+          key={item.title ?? idx}
+          className="relative group block w-[128px]"
           onMouseEnter={() => setHoveredIndex(idx)}
-          onMouseLeave={() => setHoveredIndex(null)}>
+          onMouseLeave={() => setHoveredIndex(null)}
+        >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-slate-800/[0.8] block rounded-3xl"
+                className="absolute inset-0 h-full w-full rounded-2xl bg-gradient-to-b from-[#1f2f6d]/80 to-[#0a1238]/80 block"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
                   opacity: 1,
-                  transition: { duration: 0.15 },
+                  transition: { duration: 0.2 },
                 }}
                 exit={{
                   opacity: 0,
-                  transition: { duration: 0.15, delay: 0.6 },
+                  transition: { duration: 0.2, delay: 0.05 },
                 }} />
             )}
           </AnimatePresence>
           <Card>
             <CardTitle>{item.title}</CardTitle>
-            <img src={item.image} alt="skills" className={cn("h-15",item.className)}/>
+            <img src={item.image} alt={item.title} className={cn("h-12 w-12 object-contain mx-auto", item.className)} />
           </Card>
         </div>
       ))}
@@ -48,11 +51,11 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-transparent group-hover:border-slate-700 relative z-20 border-1",
+        "rounded-2xl h-full w-full min-h-[128px] px-3 py-3 overflow-hidden bg-[#050a24]/85 group-hover:border-[#7da7ff]/50 relative z-20 border border-slate-700/80 transition-colors duration-300",
         className
       )}>
-      <div className="relative z-50 flex justify-center">
-        <div className="p-4 flex flex-col gap-4">{children}</div>
+      <div className="relative z-50 flex h-full justify-center">
+        <div className="flex h-full flex-col items-center justify-between gap-3">{children}</div>
       </div>
     </div>
   );
@@ -62,8 +65,8 @@ export const CardTitle = ({
   children
 }) => {
   return (
-    <h4 className={cn("text-white text-md font-bold tracking-wide text-center", className)}>
+    <p className={cn("text-white text-xs font-semibold tracking-wide text-center leading-tight min-h-[34px] flex items-center justify-center", className)}>
       {children}
-    </h4>
+    </p>
   );
 };
