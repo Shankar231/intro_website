@@ -35,9 +35,10 @@ export const Timeline = ({
               <h3 className="hidden md:block text-md md:pl-20 md:text-xl font-bold text-white">{item.year}</h3>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="block text-xl mb-4 text-left font-bold text-[#2b7efe]">{item.title}</h3>
-              <p className="text-xs lg:text-lg md:text-lg text-white text-justify">{item.content}</p>
+            <div className="relative pl-16 sm:pl-20 pr-2 sm:pr-4 md:pl-4 w-full">
+              <h3 className="md:hidden block text-sm mb-1 text-left font-semibold text-slate-300">{item.year}</h3>
+              <h3 className="block text-lg sm:text-xl mb-3 sm:mb-4 text-left font-bold text-[#2b7efe]">{item.title}</h3>
+              <p className="text-xs sm:text-sm lg:text-lg md:text-base text-white text-left sm:text-justify">{item.content}</p>
             </div>
           </div>
         ))}

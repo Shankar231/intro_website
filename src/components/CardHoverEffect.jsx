@@ -10,11 +10,11 @@ export const HoverEffect = ({
 
   return (
     <div
-      className={cn("flex flex-wrap gap-3", className)}>
+      className={cn("flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-3", className)}>
       {items.map((item, idx) => (
         <div
           key={item.title ?? idx}
-          className="relative group block w-[128px]"
+          className="relative group block w-[calc(50%-0.25rem)] min-[420px]:w-[110px] sm:w-[120px] lg:w-[128px]"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -51,7 +51,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full min-h-[128px] px-3 py-3 overflow-hidden bg-[#050a24]/85 group-hover:border-[#7da7ff]/50 relative z-20 border border-slate-700/80 transition-colors duration-300",
+        "rounded-2xl h-full w-full min-h-[110px] sm:min-h-[128px] px-2 sm:px-3 py-3 overflow-hidden bg-[#050a24]/85 group-hover:border-[#7da7ff]/50 relative z-20 border border-slate-700/80 transition-colors duration-300",
         className
       )}>
       <div className="relative z-50 flex h-full justify-center">

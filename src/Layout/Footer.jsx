@@ -8,15 +8,15 @@ function Footer() {
     <>
       <footer className="bg-black bottom-0">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-            <div className="flex flex-col lg:flex-row md:flex-row justify-between w-[100%]">
-                <div className="mb-6 mb-0 lg:w-[70%] md:w-[50%]">
+            <div className="flex flex-col lg:flex-row md:flex-row justify-between w-full gap-6">
+                <div className="mb-2 lg:mb-0 lg:w-[70%] md:w-[50%]">
                     <div className='flex mb-2'>
                         <Link to={"/"}>
                             <img src={logo} className="lg:h-15 md:h-12 h-10 me-3" alt="Codium Logo" />
                         </Link>
                     </div>
                     <div>
-                        <h5 className='text-2xl font-bold text-left'>Shankar Manjrekar</h5>
+                        <h5 className='text-xl sm:text-2xl font-bold text-left'>Shankar Manjrekar</h5>
                         <p className='text-left text-sm lg:text-lg md:text-md max-w-120 text-white'>Web Developer passionate about crafting visually, appealing and highly functional websites.</p>
                     </div>
                 </div>
@@ -43,9 +43,9 @@ function Footer() {
                 </div>
             </div>
             <hr className="my-6 border-gray-500 mx-auto lg:my-8"/>
-            <div className="flex items-center justify-between w-[100%]">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full gap-2">
                 <div>
-                    <span className="text-sm text-white text-center">© {currentYear}   <Link to={"/"} className="hover:underline">Shankar Manjrekar</Link>. All Rights Reserved.</span>
+                    <span className="text-xs sm:text-sm text-white text-left sm:text-center block">© {currentYear}   <Link to={"/"} className="hover:underline">Shankar Manjrekar</Link>. All Rights Reserved.</span>
                 </div>
             </div>
         </div>

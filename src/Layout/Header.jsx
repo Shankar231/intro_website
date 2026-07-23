@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-scroll';
 import { Navbar,NavBody,NavItems,MobileNav,NavbarLogo,MobileNavHeader,MobileNavToggle,MobileNavMenu, } from '../components/Navbar';
 import { InteractiveHoverButton } from '../components/InteractiveHoverButton';
@@ -19,14 +19,6 @@ function Header() {
             link: "experience",
         },
     ];
-    useEffect(() => {
-        const onScroll = () => {
-            setScrolled(window.scrollY > 10);
-        };
-
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
-    }, []);
   return (
     <>
         <Navbar>
@@ -64,7 +56,14 @@ function Header() {
                     <span className="block">{item.name}</span>
                 </Link>
                 ))}
-                <Link to='contact' smooth={true}>Contact Me</Link>
+                <Link
+                  to='contact'
+                  smooth={true}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="relative text-neutral-600 dark:text-neutral-300"
+                >
+                  Contact Me
+                </Link>
             </MobileNavMenu>
             </MobileNav>
         </Navbar>

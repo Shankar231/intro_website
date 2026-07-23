@@ -160,30 +160,29 @@ function MainHome() {
     {
       title: "Frontend",
       items: frontend,
-      cardClass: "md:col-span-3",
+      cardClass: "sm:col-span-2 lg:col-span-3",
     },
     {
       title: "Backend",
       items: backend,
-      cardClass: "md:col-span-2",
+      cardClass: "sm:col-span-2 lg:col-span-2",
     },
     {
       title: "Database",
       items: database,
-      cardClass: "md:col-span-2",
+      cardClass: "sm:col-span-1 lg:col-span-2",
     },
     {
       title: "Mobile",
       items: mobile,
-      cardClass: "md:col-span-1",
+      cardClass: "sm:col-span-1 lg:col-span-1",
     },
     {
       title: "Tools",
       items: tools,
-      cardClass: "md:col-span-2",
+      cardClass: "sm:col-span-2 lg:col-span-2",
     },
   ];
-  const totalSkills = skillSections.reduce((acc, section) => acc + section.items.length, 0);
 
   const projects = [
     {
@@ -230,12 +229,12 @@ function MainHome() {
     <>
       {/* <Pointer className="fill-[#2b7efe]"/> */}
       <Header/>
-        <div className='bg-[#030726]'>
-          <div className="relative flex w-full flex-col items-center justify-center h-[100vh]">
+        <div className='bg-[#030726] w-full overflow-x-hidden'>
+          <div className="relative flex w-full flex-col items-center justify-center h-[60vh] sm:h-[80vh] lg:h-[100vh] overflow-hidden">
             <ScrollVelocityContainer className="text-4xl md:text-7xl md:leading-[14rem] font-bold tracking-[-0.02em]">
               <ScrollVelocityRow baseVelocity={2} direction={1}>
                 {languages.map((language, index) => (
-                  <span key={index} className='text-[5rem] lg:text-[20rem] text-[#213547]'>
+                  <span key={index} className='text-[3rem] sm:text-[5rem] lg:text-[20rem] text-[#213547]'>
                     &nbsp;|&nbsp;{language}
                   </span>
                 ))}
@@ -244,19 +243,19 @@ function MainHome() {
             <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
           </div>
-          <section className="flex flex-col lg:flex-row md:flex-row w-full items-center justify-between h-screen" id='about_me'>
-            <div className='w-[100%] lg:w-[50%]'>
-              <div className='px-6 lg:px-14'>
-                <FloatingDock mobileClassName="translate-y-20" items={links}/>
-                <h1 className='text-3xl text-left text-white'>Hi, I'm <span className='text-[#2b7efe]'>Shankar Manjrekar</span> and I am a passionate <TypewriterEffectSmooth words={words}/></h1>
-                <p className='text-[14px] lg:text-xl text-left text-white'>I’m a Full Stack Developer with 3+ years of experience in designing, developing, and maintaining scalable web and mobile applications. My expertise includes front-end and back-end development, database management, API integration, and application deployment. I specialize in building responsive, user-friendly, and performance-driven digital solutions tailored to business needs.</p>
-                <div className="flex gap-4 mt-2 lg:mt-6">
+          <section className="flex flex-col lg:flex-row w-full items-center justify-between gap-10 lg:gap-0 min-h-screen py-16 lg:py-0 overflow-hidden" id='about_me'>
+            <div className='w-full lg:w-[50%] order-2 lg:order-1'>
+              <div className='px-4 sm:px-6 lg:px-14'>
+                <FloatingDock items={links}/>
+                <h1 className='text-2xl sm:text-3xl text-left text-white leading-snug'>Hi, I'm <span className='text-[#2b7efe]'>Shankar Manjrekar</span> and I am a passionate <TypewriterEffectSmooth words={words}/></h1>
+                <p className='text-sm sm:text-[14px] lg:text-xl text-left text-white mt-2'>I’m a Full Stack Developer with 3+ years of experience in designing, developing, and maintaining scalable web and mobile applications. My expertise includes front-end and back-end development, database management, API integration, and application deployment. I specialize in building responsive, user-friendly, and performance-driven digital solutions tailored to business needs.</p>
+                <div className="flex gap-4 mt-4 lg:mt-6">
                   <Link to={"contact"} smooth={true}><ShimmerButton>Hire for Freelance</ShimmerButton></Link>
                 </div>
               </div>
             </div>
-           <div className="w-[100%] lg:w-[50%]">
-            <div className="relative flex justify-center items-center">
+           <div className="w-full lg:w-[50%] order-1 lg:order-2 flex justify-center">
+            <div className="relative flex justify-center items-center scale-[0.62] sm:scale-[0.78] md:scale-90 lg:scale-100 origin-center">
 
               {/* Gradient Glow */}
               <div className="absolute h-72 w-72 rounded-full bg-cyan-500/30 blur-3xl animate-pulse" />
@@ -286,13 +285,13 @@ function MainHome() {
                 <img
                   src={Shankar}
                   alt="shankar_manjrekar"
-                  className="h-110 md:h-120 lg:h-130 drop-shadow-[0_20px_60px_rgba(8,78,117,0.8)]"
+                  className="h-110 md:h-120 lg:h-130 max-w-none drop-shadow-[0_20px_60px_rgba(8,78,117,0.8)]"
                 />
               </div>
             </div>
           </div>
           </section>
-          <section className='relative overflow-hidden py-30 px-6 lg:px-14 bg-black' id='skills'>
+          <section className='relative overflow-hidden py-16 sm:py-20 lg:py-30 px-4 sm:px-6 lg:px-14 bg-black' id='skills'>
             <div className='pointer-events-none absolute inset-0'>
               <div className='absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(43,126,254,0.16),transparent_32%),radial-gradient(circle_at_90%_20%,rgba(6,182,212,0.14),transparent_30%)]' />
               <div
@@ -305,20 +304,20 @@ function MainHome() {
               />
             </div>
             <div className='relative z-10'>
-              <div className='p-6 lg:p-8 shadow-[0_10px_30px_rgba(2,8,23,0.45)]'>
+              <div className='py-2 sm:p-6 lg:p-8'>
                 <p className='text-xs tracking-[0.22em] uppercase text-[#9dc0ff]'>Core Expertise</p>
-                <h2 className='text-4xl text-left text-white leading-none inline-block font-semibold mt-2'>Skills</h2>
+                <h2 className='text-3xl sm:text-4xl text-left text-white leading-none inline-block font-semibold mt-2'>Skills</h2>
               </div>
 
-              <div className='mt-6 grid grid-cols-1 md:grid-cols-5 gap-4 auto-rows-fr'>
+              <div className='mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 auto-rows-fr'>
                 {skillSections.map((section) => (
                   <div
                     key={section.title}
-                    className={`rounded-2xl border border-slate-600/70 bg-[#060b2f]/70 backdrop-blur-sm p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${section.cardClass}`}
+                    className={`rounded-2xl border border-slate-600/70 bg-[#060b2f]/70 backdrop-blur-sm p-4 sm:p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${section.cardClass}`}
                   >
                     <div className='h-1 w-14 rounded-full bg-gradient-to-r from-cyan-300 to-indigo-300 mb-4' />
                     <div className='flex items-start justify-between gap-3'>
-                      <h3 className='text-white text-xl font-semibold mb-6'>{section.title}</h3>
+                      <h3 className='text-white text-lg sm:text-xl font-semibold mb-4 sm:mb-6'>{section.title}</h3>
                     </div>
                     <HoverEffect items={section.items} />
                   </div>
@@ -419,15 +418,15 @@ function MainHome() {
               </div>
             </div>
           </section> */}
-          <section className='py-30 px-6 lg:px-14' id='experience'>
+          <section className='py-16 sm:py-20 lg:py-30 px-4 sm:px-6 lg:px-14' id='experience'>
             <p className='text-xs tracking-[0.22em] uppercase text-[#9dc0ff]'>Experience</p>
-            <h5 className='text-4xl text-left text-white leading-none inline-block font-semibold mt-2'>Experience</h5>
+            <h5 className='text-3xl sm:text-4xl text-left text-white leading-none inline-block font-semibold mt-2'>Experience</h5>
             <div className="relative w-full overflow-clip">
               <Timeline data={experience} />
             </div>
           </section>
-          <section className='py-30 px-6 lg:px-14' id='contact'>
-            <h5 className='text-4xl text-left text-white leading-none inline-block font-semibold'>Contact Me</h5>
+          <section className='py-16 sm:py-20 lg:py-30 px-4 sm:px-6 lg:px-14' id='contact'>
+            <h5 className='text-3xl sm:text-4xl text-left text-white leading-none inline-block font-semibold'>Contact Me</h5>
             <ContactForm/>
           </section>
         </div>
