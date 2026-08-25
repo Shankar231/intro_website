@@ -84,7 +84,7 @@ export default function ContactForm () {
                     <div className="w-[100%] lg:w-[50%]">
                         <div className="rounded-4xl border-1 border-[#2b7efe] p-1">
                             <div className="bg-[#2b7efe] lg:h-100 md:h-80 py-4 px-2 lg:p-4 md:p-4 flex lg:justify-evenly gap-6 md:gap-4 flex-col items-start rounded-[28px]">
-                                <div className="flex items-start gap-2 lg:gap-6 w-full lg:w-80">
+                                <div className="flex items-start gap-2 lg:gap-6 w-full">
                                     <div>
                                         <div className="bg-[#030726] rounded-full w-10 h-10 lg:w-12 md:w-10 lg:h-12 md:h-10 flex items-center justify-center text-white">
                                         <AlternateEmailIcon sx={{
@@ -95,12 +95,12 @@ export default function ContactForm () {
                                         }}/>
                                         </div>
                                     </div>
-                                    <div className="min-w-0 flex-1">
+                                    <div className="min-w-0 flex flex-col">
                                         <h6 className="text-sm lg:text-lg md:text-lg font-bold text-left text-white">Connect with me</h6>
                                         <a href="mailto:shankarmanjarekar123@gmail.com" className="text-left text-xs lg:text-lg md:text-lg underline font-semibold text-white break-all">shankarmanjarekar123@gmail.com</a>
                                     </div>
                                 </div>
-                                <div className="flex items-start gap-2 lg:gap-6 w-full lg:w-80">
+                                <div className="flex items-start gap-2 lg:gap-6 w-full">
                                     <div>
                                         <div className="bg-[#030726] rounded-full w-10 h-10 lg:w-12 md:w-10 lg:h-12 md:h-10 flex items-center justify-center text-white">
                                         <CallIcon sx={{
@@ -111,12 +111,12 @@ export default function ContactForm () {
                                         }}/>
                                         </div>
                                     </div>
-                                    <div className="min-w-0 flex-1">
+                                    <div className="min-w-0 flex flex-col">
                                         <h6 className="text-sm lg:text-lg md:text-lg font-bold text-left text-white">Let's have a chat</h6>
                                         <a href="tel:+91 9082214852" className="text-left text-xs lg:text-lg md:text-lg text-white">+91 90822-14852</a>
                                     </div>
                                 </div>
-                                <div className="flex items-start gap-2 lg:gap-6 w-full lg:w-80">
+                                <div className="flex items-start gap-2 lg:gap-6 w-full">
                                     <div>
                                         <div className="bg-[#030726] rounded-full w-10 h-10 lg:w-12 md:w-10 lg:h-12 md:h-10 flex items-center justify-center text-white">
                                             <LocationOnIcon sx={{
@@ -127,7 +127,7 @@ export default function ContactForm () {
                                             }}/>
                                         </div>
                                     </div>
-                                    <div className="min-w-0 flex-1">
+                                    <div className="min-w-0 flex flex-col">
                                         <h6 className="text-sm lg:text-xl md:text-lg font-bold text-left text-white">Find Me Here</h6>
                                         <p className="text-left text-xs lg:text-lg md:text-lg text-white">Mumbai, Maharashtra</p>
                                     </div>
