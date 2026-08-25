@@ -62,7 +62,7 @@ export default function ContactForm () {
 
     return (
         <>
-            <div className="px-0 lg:px-20 py-8">
+            <div className="px-0 py-8">
                 <div className="flex flex-col lg:flex-row w-full gap-6">
                     <div className="w-[100%] lg:w-[50%]">
                         <form ref={formRef} onSubmit={sendEmail}>

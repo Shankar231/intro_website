@@ -15,6 +15,10 @@ function Header() {
             link: "skills",
         },
         {
+            name: "Projects",
+            link: "projects",
+        },
+        {
             name: "Experience",
             link: "experience",
         },

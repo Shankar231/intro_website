@@ -7,7 +7,7 @@ function Footer() {
   return (
     <>
       <footer className="bg-black bottom-0">
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="w-full px-4 sm:px-6 lg:px-24 py-6 lg:py-8">
             <div className="flex flex-col lg:flex-row md:flex-row justify-between w-full gap-6">
                 <div className="mb-2 lg:mb-0 lg:w-[70%] md:w-[50%]">
                     <div className='flex mb-2'>
@@ -34,6 +34,9 @@ function Footer() {
                         <ul className="text-gray-400">
                             <li className="mb-4 text-left">
                                 <Link to={"skills"} className="text-left" smooth={true}>Skills</Link>
+                            </li>
+                            <li className="mb-4 text-left">
+                                <Link to={"projects"} className="text-left" smooth={true}>Projects</Link>
                             </li>
                             <li className="mb-4 text-left">
                                 <Link to={"contact"} className="text-left" smooth={true}>Contact me</Link>
